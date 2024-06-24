@@ -18,10 +18,12 @@ function Incrument() {
      if(count === 33 || count === 66 || count === 99) {
           audio.play();
      }
-     console.log(count)
-     if(count === 34 || count === 67 || count === 100) {
-          audio.pause();
-     }
+     
+     setInterval(() => {
+          if(count === 33 || count === 66 || count === 99) {
+               audio.pause();
+          }
+     }, 3000)
 
      setInterval(() => {
           
@@ -29,7 +31,7 @@ function Incrument() {
           setCount(0)
           audio.pause();
      }
-     }, 1000);
+     }, 2000);
 
 
      const Clear = () => {
